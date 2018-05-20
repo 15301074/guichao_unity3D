@@ -1,0 +1,23 @@
+<!--人物初始属性-->
+<attributes>
+	<hp>
+		<name>生命</name>
+    	<value>123</value>
+	</hp>
+	<mp>
+		<name>魔法</name>
+    	<value>234</value>
+	</mp>
+	<atk>
+		<name>攻击</name>
+    	<value>60</value>
+	</atk>
+	<ms>
+		<name>移速</name>
+    	<value>20</value>
+	</ms>
+	<as>
+		<name>攻速</name>
+    	<value>0.61</value>
+	</as>
+</attributes>
