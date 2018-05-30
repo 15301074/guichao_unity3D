@@ -152,8 +152,8 @@ public class PlayerController : MonoBehaviour {
 			break;
 		case attrType.mSpeed:
 			result = mSpeed - num;
-			if (result <= 5) {	// 移动速度降到阈值以下
-				mSpeed = 5;
+			if (result <= 0) {	// 移动速度降到阈值以下
+				mSpeed = 0;
 			} else {
 				mSpeed = result;
 			}

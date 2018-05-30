@@ -53,22 +53,69 @@ public class MonsterAI : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider collider){
-		 
-		if (collider.tag == "ATK") {
-			Vector3 lookCamera = Camera.main.transform.position - transform.position;
-			lookCamera.y = 0;
-			bloodEFX.transform.rotation = Quaternion.LookRotation (lookCamera);
 
-			playBloodEFX ();
-			hp = Mathf.Clamp (hp - 24, 0, hpMax);
-			animator.SetTrigger ("getHit");
-			if (hp > 0) {
-				soundHit.Play ();
-			} else {
-				soundDie.Play ();
-			}
-		}
-	}
+        if (collider.tag == "ATK")
+        {
+            Vector3 lookCamera = Camera.main.transform.position - transform.position;
+            lookCamera.y = 0;
+            bloodEFX.transform.rotation = Quaternion.LookRotation(lookCamera);
+
+            playBloodEFX();
+            //hp = Mathf.Clamp (hp - 24, 0, hpMax);
+            hp = Mathf.Clamp(hp - PlayerController.getAttr(PlayerController.attrType.atk), 0, hpMax);
+
+            animator.SetTrigger("getHit");
+            if (hp > 0)
+            {
+                soundHit.Play();
+            }
+            else
+            {
+                soundDie.Play();
+            }
+        }
+
+        if (collider.tag == "ATKSkill1")
+        {
+            Vector3 lookCamera = Camera.main.transform.position - transform.position;
+            lookCamera.y = 0;
+            bloodEFX.transform.rotation = Quaternion.LookRotation(lookCamera);
+
+            playBloodEFX();
+            hp = Mathf.Clamp(hp - 50, 0, hpMax);
+
+
+            animator.SetTrigger("getHit");
+            if (hp > 0)
+            {
+                soundHit.Play();
+            }
+            else
+            {
+                soundDie.Play();
+            }
+        }
+
+        if (collider.tag == "ATKSkill3")
+        {
+            Vector3 lookCamera = Camera.main.transform.position - transform.position;
+            lookCamera.y = 0;
+            bloodEFX.transform.rotation = Quaternion.LookRotation(lookCamera);
+
+            playBloodEFX();
+            hp = Mathf.Clamp(hp - 100, 0, hpMax);
+
+            animator.SetTrigger("getHit");
+            if (hp > 0)
+            {
+                soundHit.Play();
+            }
+            else
+            {
+                soundDie.Play();
+            }
+        }
+    }
 
 	void creatureDieStart(){
 

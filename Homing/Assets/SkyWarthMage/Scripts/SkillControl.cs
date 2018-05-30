@@ -48,9 +48,9 @@ public class SkillControl : MonoBehaviour {
 
 		clone = (Rigidbody)Instantiate(Skill_1,Skill_1_Position.position,Skill_1_Position.rotation);
 		clone.velocity = transform.TransformDirection(Vector3.forward * Skill_1_Speed);
-
-		//1秒后销毁克隆体
-		Destroy(GameObject.Find("Skill1(Clone)"),1);
+        clone.tag = "ATKSkill1";
+        //1秒后销毁克隆体
+        Destroy(GameObject.Find("Skill1(Clone)"),1);
 
 		//Destroy (clone, 3);
 	}

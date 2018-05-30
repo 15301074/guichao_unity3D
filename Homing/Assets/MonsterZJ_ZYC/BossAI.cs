@@ -16,6 +16,7 @@ public class BossAI : MonoBehaviour {
     public float walkSpeed;          //移动速度  
     public float runSpeed;          //跑动速度  
     int times = 1;
+    public int type;
     private enum MonsterState
     {
         STAND,      //站立 
@@ -47,7 +48,9 @@ public class BossAI : MonoBehaviour {
     private DisToEveryMonster glb;
     private int intState;
 	// Use this for initialization
-    void Start(){
+    void Start()
+    {
+
         glb = global.GetComponent<DisToEveryMonster>();
         intState = glb.monster1State;
         player = GameObject.FindGameObjectWithTag("Player"); 
@@ -101,8 +104,8 @@ public class BossAI : MonoBehaviour {
 
             //游走，根据状态随机时生成的目标位置修改朝向，并向前移动  
             case MonsterState.WALK:
-                print("walk now");
-                this.PlayAnimator("WALK");
+               // print("walk now");
+                //this.PlayAnimator("WALK");
                 this.Walk();
 
                 WalkCheck();//改变走路状态
@@ -111,8 +114,8 @@ public class BossAI : MonoBehaviour {
             //警戒状态，播放一次警告动画和声音，并持续朝向玩家位置  
             case MonsterState.WARN:
                 print("warn now");
-                this.PlayAnimator("WARN");
                 this.Warning();
+                this.PlayAnimator("WARN");
 
                 WarnCheck();//改变警戒状态
                 break;
@@ -127,7 +130,7 @@ public class BossAI : MonoBehaviour {
                 break;
 
             case MonsterState.ATTACK:
-                print("attach now");
+                print(Vector3.Distance(player.transform.position, this.transform.position));
                 this.Attack();
                 this.PlayAnimator("ATTACH");
 
@@ -156,31 +159,48 @@ public class BossAI : MonoBehaviour {
     //警戒操作  向玩家
     void Warning()
     {
-        //transform.Translate(Vector3.forward * Time.deltaTime * walkSpeed);
-        targetRotation = Quaternion.LookRotation(player.transform.position - transform.position, Vector3.up);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.1f);  
+       // transform.Translate(Vector3.forward * Time.deltaTime * walkSpeed);
+        if (type != 1)
+        {
+            targetRotation = Quaternion.LookRotation(player.transform.position - transform.position, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.1f);
+        }
+        else
+        {
+            targetRotation = Quaternion.LookRotation(-player.transform.position + transform.position, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.1f);
+        }
+
     }
 
     void Walk()
     {
-
         transform.Translate(Vector3.forward * Time.deltaTime * walkSpeed);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.1f); 
     }
 
     void Run()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * runSpeed);
-        //朝向玩家位置  
-        targetRotation = Quaternion.LookRotation(player.transform.position - transform.position, Vector3.up);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.1f);  
+        if (type != 1)
+        {
+            targetRotation = Quaternion.LookRotation(player.transform.position - transform.position, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.1f);
+
+            transform.Translate(Vector3.forward * Time.deltaTime * runSpeed);
+        }
+        else
+        {
+            targetRotation = Quaternion.LookRotation(-player.transform.position + transform.position, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.1f);
+            transform.Translate(-Vector3.forward * Time.deltaTime * runSpeed);
+        }
     }
 
     void Attack()
     {
         //朝向玩家位置  
-        targetRotation = Quaternion.LookRotation(player.transform.position - transform.position, Vector3.up);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.1f);  
+        //targetRotation = Quaternion.LookRotation(player.transform.position - transform.position, Vector3.up);
+       //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.1f);  
 
     }
 
@@ -322,7 +342,7 @@ public class BossAI : MonoBehaviour {
             currentState = MonsterState.RETURN;
         }
         //玩家在攻击范围内，状态变为攻击
-        else if (diatanceToPlayer < attackRange)
+        else if (diatanceToPlayer < (attackRange-1f))
         {
             print("Boss Run to Attach ");
             currentState = MonsterState.ATTACK;
@@ -366,7 +386,7 @@ public class BossAI : MonoBehaviour {
     void ReturnCheck()
     {
         diatanceToInitial = Vector3.Distance(transform.position, initialPosition);
-        if (diatanceToInitial < 0.5f)
+        if (diatanceToInitial < 3f)
         {
             //is_Running = false;
             //RandomAction();

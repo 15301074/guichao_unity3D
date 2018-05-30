@@ -18,6 +18,8 @@ TagManager:
   - ATKSphereEnemy
   - ATK
   - GameCanvas
+  - ATKSkill3
+  - ATKSkill1
   layers:
   - Default
   - TransparentFX

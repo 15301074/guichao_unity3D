@@ -12,9 +12,9 @@ public class DisToEveryMonster : MonoBehaviour {
     public int monster2State;
     public int monster3State;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         monster1State = 0;//
-        //monster1=GameObject.FindGameObjectsWithTag("monster1");
+       // monster1=GameObject.FindGameObjectsWithTag("MosterGay");
         monster2State = 0;// GameObject.FindGameObjectsWithTag("monster2");
         monster3State = 0;// GameObject.FindGameObjectsWithTag("monster3");
 	}
