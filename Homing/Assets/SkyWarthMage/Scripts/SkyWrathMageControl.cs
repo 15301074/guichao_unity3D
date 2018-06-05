@@ -19,8 +19,8 @@ public class SkyWrathMageControl : MonoBehaviour {
 	static int skill_1_State = Animator.StringToHash ("Base Layer.skill_1");
 	static int skill_2_State = Animator.StringToHash ("Base Layer.skill_2");
 	static int skill_3_State = Animator.StringToHash ("Base Layer.skill_3");
+    static int skill_4_State = Animator.StringToHash("Base Layer.skill_4");
 
-   
 
 
     void Start () {
@@ -90,8 +90,23 @@ public class SkyWrathMageControl : MonoBehaviour {
 			anim.SetBool ("skill_3", false);
 		}
 
-		//死亡
-		if (Input.GetKeyDown (KeyCode.K)) {
+        //技能4
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            int MP = PlayerController.getAttr(PlayerController.attrType.MP);
+            // --------------------------------------- 先判断冷却再判断魔量    待添加：冷却判断 --------------------------------------- 
+            if (MP > 50) {
+                anim.SetBool("skill_4", true);
+                PlayerController.reduceAttr(50, PlayerController.attrType.MP);
+                PlayerController.speakByName("攻击3");
+            }  else {
+                PlayerController.speakByName("魔法不足3");
+            }     } else  {
+            anim.SetBool("skill_4", false);
+        }
+       
+        //死亡
+        if (Input.GetKeyDown (KeyCode.K)) {
 			anim.SetBool ("die", true);
 		}
 
@@ -113,7 +128,6 @@ public class SkyWrathMageControl : MonoBehaviour {
     {
         int HP = PlayerController.getAttr(PlayerController.attrType.HP);
         int maxHP = PlayerController.getAttr(PlayerController.attrType.maxHP);
-        print("撞到了！");
         if (col.tag == "ATKSphereEnemy")
         {
             if (HP > 0)
@@ -130,11 +144,25 @@ public class SkyWrathMageControl : MonoBehaviour {
                 }
             }
         }
-        else
+        else if(col.tag == "snakeSkill2")
         {
-
+            print("snakeskill");
+            Destroy(col.gameObject);
+            if (HP > 0)
+            {
+                // HP = Mathf.Clamp(HP - 15, 0, maxHP);
+                PlayerController.reduceAttr(20, PlayerController.attrType.HP);
+                if (HP <= 0)
+                {
+                    // anim.SetBool("die", true);
+                    anim.SetBool("die", true);
+                    //anim.SetBool("die", true);
+                    this.enabled = false;
+                    //TODO: sky DIe;
+                }
+            }
         }
-       
+
     }
 
     public void ATKStart()

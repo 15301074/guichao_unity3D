@@ -4,64 +4,46 @@ using UnityEngine;
 
 public class DisToEveryMonster : MonoBehaviour {
     public GameObject player;
+    public int[] monsterFlag ={0,0,0,0,0,0,0,0,0,0,0};
+    public string [] monsterTag= {"monster1","monster2","monster3","monster4","monster5","monster6","monster7","monster8","monster9","monster10"};
     private GameObject[] monster1;
 
     //private GameObject[] monster2;
     //private GameObject[] monster3;
     public int monster1State;
-    public int monster2State;
-    public int monster3State;
+
 	// Use this for initialization
-	void Awake () {
-        monster1State = 0;//
-       // monster1=GameObject.FindGameObjectsWithTag("MosterGay");
-        monster2State = 0;// GameObject.FindGameObjectsWithTag("monster2");
-        monster3State = 0;// GameObject.FindGameObjectsWithTag("monster3");
+	void Start () {
+        
 	}
     void Update()
     {
         //UpdateMonster1();
     }
-	// Update is called once per frame
-	/*void UpdateMonster1 () {
-        //if (this.isInmonsterAttach("monster1"))
-        //    monster1State = 3;
-        //else if(this.isInmonsterDefend("monster1"))s
-        //    monster1State =2;
-        //else if(this.isInmonsterWarn("monster1"))
-        //    monster1State=1;
-        //else
-        //    monster1State=0;
-	}
-    bool isInmonsterAttach(string tag)
+
+   public  void changeMonsterFlag(string tag, int i)
     {
-        foreach (GameObject monster in monster1)
+        int j = 0;
+        for (j = 0; j < 10; j++)
         {
-            if (Vector3.Distance(player.transform.position, monster.transform.position) < monster.GetComponent<monsterOneAI>().attackRange)
-                return true;
+            if (monsterTag[j] == tag)
+            {
+                monsterFlag[j] = i;
+                break;
+            }
         }
-        return false;
     }
-    bool isInmonsterDefend(string tag)
+
+   public  int getMonsterFlag(string tag)
     {
-        foreach (GameObject monster in monster1)
+        int j = 0;
+        for (j = 0; j < 10; j++)
         {
-            if (Vector3.Distance(player.transform.position, monster.transform.position) < monster.GetComponent<monsterOneAI>().defendRadius)
-                return true;
+            if (monsterTag[j] == tag)
+            {
+               return  monsterFlag[j];
+            }
         }
-        return false;
+        return 0;
     }
-    bool isInmonsterWarn(string tag)
-    {
-        foreach (GameObject monster in monster1)
-        {
-            if (Vector3.Distance(player.transform.position, monster.transform.position) < monster.GetComponent<monsterOneAI>().alertRadius)
-                return true;
-        }
-        return false;
-    }
-    bool isPlayerDie()
-    {
-        return false;
-    }*/
 }

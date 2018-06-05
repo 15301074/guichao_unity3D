@@ -103894,36 +103894,7 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 0.8333333
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.8333333
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.8333333
-    functionName: AttackEvent
-    data: 
-    objectReferenceParameter: {fileID: 7400000}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.8333333
-    functionName: AttackEvent
-    data: 
-    objectReferenceParameter: {fileID: 7400008, guid: 2ed86f32ec04c5d4f97ff38a3eddeb1b,
-      type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.8333333
-    functionName: 'fire '
+    functionName: skill1
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

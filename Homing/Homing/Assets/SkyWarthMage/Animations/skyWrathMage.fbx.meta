@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 0726de790436dfd47b69d2edc31e8bf7
+timeCreated: 1524210684
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: ankle_L
+    100002: ankle_R
+    100004: baseShape
+    100006: bicep_L
+    100008: bicep_R
+    100010: clavicle_L
+    100012: clavicle_R
+    100014: elbow_L
+    100016: elbow_R
+    100018: head
+    100020: head_end
+    100022: Index_0_L
+    100024: Index_1_L
+    100026: Index_2_L
+    100028: Index_2_L_end
+    100030: knee_L
+    100032: knee_R
+    100034: lt_wing20_0_L
+    100036: lt_wing20_1_L
+    100038: lt_wing20_2_L
+    100040: lt_wing20_3_L
+    100042: lt_wing20_4_L
+    100044: lt_wing20_5_L
+    100046: lt_wing20_6_L
+    100048: lt_wing20_6_L_end
+    100050: lt_wing21_0_R
+    100052: lt_wing21_1_R
+    100054: lt_wing21_2_R
+    100056: lt_wing21_3_R
+    100058: lt_wing21_4_R
+    100060: lt_wing21_5_R
+    100062: lt_wing21_6_R
+    100064: lt_wing21_6_R_end
+    100066: Mid_0_L
+    100068: Mid_1_L
+    100070: Mid_2_L
+    100072: Mid_2_L_end
+    100074: midwing2_0_A_L
+    100076: midwing2_1_A_L
+    100078: midwing2_2_A_L
+    100080: midwing2_2_A_L_end
+    100082: neck1
+    100084: root
+    100086: rtmidwing3_0_A_R
+    100088: rtmidwing3_1_A_R
+    100090: rtmidwing3_2_A_R
+    100092: rtmidwing3_2_A_R_end
+    100094: skirt_tail_R0C0
+    100096: skirt_tail_R1C0
+    100098: skirt_tail_R2C0
+    100100: skirt_tail_R3C0
+    100102: skirt_tail_R3C0_end
+    100104: skywrath_beltShape
+    100106: skywrath_bracersShape
+    100108: skywrath_helmetShape
+    100110: skywrath_mage1
+    100112: skywrath_shouldersShape
+    100114: //RootNode
+    100116: spine1
+    100118: spine2
+    100120: spine3
+    100122: staff_1
+    100124: staff_fire
+    100126: staff_fire_end
+    100128: thigh_L
+    100130: thigh_R
+    100132: Thumb_0_L
+    100134: Thumb_1_L
+    100136: Thumb_2_L
+    100138: Thumb_2_L_end
+    100140: toe_0__L
+    100142: toe_0__L_end
+    100144: toe_0__R
+    100146: toe_0__R_end
+    100148: toe_1__L
+    100150: toe_1__L_end
+    100152: toe_1__R
+    100154: toe_1__R_end
+    100156: toe_2__L
+    100158: toe_2__L_end
+    100160: toe_2__R
+    100162: toe_2__R_end
+    100164: toe_3__L
+    100166: toe_3__L_end
+    100168: toe_3__R
+    100170: toe_3__R_end
+    100172: toeBase_L
+    100174: toeBase_R
+    100176: weapon_lowShape
+    100178: wingslow002Shape
+    100180: wrist_L
+    100182: wrist_R
+    400000: ankle_L
+    400002: ankle_R
+    400004: baseShape
+    400006: bicep_L
+    400008: bicep_R
+    400010: clavicle_L
+    400012: clavicle_R
+    400014: elbow_L
+    400016: elbow_R
+    400018: head
+    400020: head_end
+    400022: Index_0_L
+    400024: Index_1_L
+    400026: Index_2_L
+    400028: Index_2_L_end
+    400030: knee_L
+    400032: knee_R
+    400034: lt_wing20_0_L
+    400036: lt_wing20_1_L
+    400038: lt_wing20_2_L
+    400040: lt_wing20_3_L
+    400042: lt_wing20_4_L
+    400044: lt_wing20_5_L
+    400046: lt_wing20_6_L
+    400048: lt_wing20_6_L_end
+    400050: lt_wing21_0_R
+    400052: lt_wing21_1_R
+    400054: lt_wing21_2_R
+    400056: lt_wing21_3_R
+    400058: lt_wing21_4_R
+    400060: lt_wing21_5_R
+    400062: lt_wing21_6_R
+    400064: lt_wing21_6_R_end
+    400066: Mid_0_L
+    400068: Mid_1_L
+    400070: Mid_2_L
+    400072: Mid_2_L_end
+    400074: midwing2_0_A_L
+    400076: midwing2_1_A_L
+    400078: midwing2_2_A_L
+    400080: midwing2_2_A_L_end
+    400082: neck1
+    400084: root
+    400086: rtmidwing3_0_A_R
+    400088: rtmidwing3_1_A_R
+    400090: rtmidwing3_2_A_R
+    400092: rtmidwing3_2_A_R_end
+    400094: skirt_tail_R0C0
+    400096: skirt_tail_R1C0
+    400098: skirt_tail_R2C0
+    400100: skirt_tail_R3C0
+    400102: skirt_tail_R3C0_end
+    400104: skywrath_beltShape
+    400106: skywrath_bracersShape
+    400108: skywrath_helmetShape
+    400110: skywrath_mage1
+    400112: skywrath_shouldersShape
+    400114: //RootNode
+    400116: spine1
+    400118: spine2
+    400120: spine3
+    400122: staff_1
+    400124: staff_fire
+    400126: staff_fire_end
+    400128: thigh_L
+    400130: thigh_R
+    400132: Thumb_0_L
+    400134: Thumb_1_L
+    400136: Thumb_2_L
+    400138: Thumb_2_L_end
+    400140: toe_0__L
+    400142: toe_0__L_end
+    400144: toe_0__R
+    400146: toe_0__R_end
+    400148: toe_1__L
+    400150: toe_1__L_end
+    400152: toe_1__R
+    400154: toe_1__R_end
+    400156: toe_2__L
+    400158: toe_2__L_end
+    400160: toe_2__R
+    400162: toe_2__R_end
+    400164: toe_3__L
+    400166: toe_3__L_end
+    400168: toe_3__R
+    400170: toe_3__R_end
+    400172: toeBase_L
+    400174: toeBase_R
+    400176: weapon_lowShape
+    400178: wingslow002Shape
+    400180: wrist_L
+    400182: wrist_R
+    2100000: skywrath_mage_staff_color
+    2100002: skywrath_mage_shoulder_color
+    2100004: skywrath_mage_color1
+    2100006: skywrath_mage_head_color
+    2100008: skywrath_mage_belt_color
+    2100010: skywrath_mage_wings_color
+    2100012: skywrath_mage_bracer_color
+    4300000: weapon_lowShape
+    4300002: skywrath_shouldersShape
+    4300004: baseShape
+    4300006: skywrath_helmetShape
+    4300008: skywrath_beltShape
+    4300010: wingslow002Shape
+    4300012: skywrath_bracersShape
+    7400000: skywrath_mage1|attack
+    7400002: skywrath_mage1|attack.001
+    7400004: skywrath_mage1|baseShapeAction
+    7400006: skywrath_mage1|bindpose
+    7400008: skywrath_mage1|bindpose.001
+    7400010: skywrath_mage1|bindpose.002
+    7400012: skywrath_mage1|cast
+    7400014: skywrath_mage1|cast.001
+    7400016: skywrath_mage1|cast2
+    7400018: skywrath_mage1|cast2.001
+    7400020: skywrath_mage1|cast3
+    7400022: skywrath_mage1|cast3.001
+    7400024: skywrath_mage1|death
+    7400026: skywrath_mage1|death.001
+    7400028: skywrath_mage1|flexSlidersNodeAction
+    7400030: skywrath_mage1|flexSlidersNode|flexSlidersNode|flexSlidersNodeAction|flexSlide
+    7400032: skywrath_mage1|flexSlidersNode|flexSlidersNode|Key.002|Take 001|BaseLayer|flex
+    7400034: skywrath_mage1|flexSlidersNode|flexSlidersNode|Key|Take 001|BaseLayer|flexSlid
+    7400036: skywrath_mage1|flexSlidersNode|flexSlidersNode|skywrath2:baseAction|flexSlider
+    7400038: skywrath_mage1|flexSlidersNode|flexSlidersNode|skywrath2:skywrath_beltAction|f
+    7400040: skywrath_mage1|flexSlidersNode|flexSlidersNode|skywrath2:skywrath_bracersActio
+    7400042: skywrath_mage1|flexSlidersNode|flexSlidersNode|skywrath2:skywrath_helmetAction
+    7400044: skywrath_mage1|flexSlidersNode|flexSlidersNode|skywrath2:skywrath_shouldersAct
+    7400046: skywrath_mage1|flexSlidersNode|flexSlidersNode|skywrath2:wingslow002Action|fle
+    7400048: skywrath_mage1|idle
+    7400050: skywrath_mage1|idle.001
+    7400052: skywrath_mage1|idle.002
+    7400054: skywrath_mage1|idle.003
+    7400056: skywrath_mage1|idle_injured
+    7400058: skywrath_mage1|injured
+    7400060: skywrath_mage1|injured.001
+    7400062: skywrath_mage1|injured.002
+    7400064: skywrath_mage1|pray
+    7400066: skywrath_mage1|pray.001
+    7400068: skywrath_mage1|run_aggresive
+    7400070: skywrath_mage1|run_aggresive.001
+    7400072: skywrath_mage1|skywrath2:baseAction
+    7400074: skywrath_mage1|skywrath2:skywrath_beltAction
+    7400076: skywrath_mage1|skywrath2:skywrath_bracersAction
+    7400078: skywrath_mage1|skywrath2:skywrath_helmetAction
+    7400080: skywrath_mage1|skywrath2:skywrath_shouldersAction
+    7400082: skywrath_mage1|skywrath2:wingslow002Action
+    7400084: skywrath_mage1|skywrath_beltShapeAction
+    7400086: skywrath_mage1|skywrath_bracersShapeAction
+    7400088: skywrath_mage1|skywrath_helmetShapeAction
+    7400090: skywrath_mage1|skywrath_shouldersShapeAction
+    7400092: skywrath_mage1|spawn
+    7400094: skywrath_mage1|spawn.001
+    7400096: skywrath_mage1|vsDmxIO SceneAction
+    7400098: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|attack|vsDmxIO Scene|attack
+    7400100: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|bindpose|vsDmxIO Scene|bindpose
+    7400102: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|cast2|vsDmxIO Scene|cast2
+    7400104: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|cast3|vsDmxIO Scene|cast3
+    7400106: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|cast|vsDmxIO Scene|cast
+    7400108: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|death|vsDmxIO Scene|death
+    7400110: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|flexSlidersNodeAction|vsDmxIO
+      Scene
+    7400112: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|idle_injured|vsDmxIO Scene|idle_inj
+    7400114: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|idle|vsDmxIO Scene|idle
+    7400116: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|injured|vsDmxIO Scene|injured
+    7400118: 'skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|Key.002|Take 001|BaseLayer|vsDmxIO '
+    7400120: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|Key|Take 001|BaseLayer|vsDmxIO
+      Scen
+    7400122: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|pray|vsDmxIO Scene|pray
+    7400124: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|run_aggresive|vsDmxIO Scene|run_agg
+    7400126: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|skywrath2:baseAction|vsDmxIO
+      Scene|
+    7400128: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|skywrath2:skywrath_beltAction|vsDmx
+    7400130: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|skywrath2:skywrath_bracersAction|vs
+    7400132: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|skywrath2:skywrath_helmetAction|vsD
+    7400134: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|skywrath2:skywrath_shouldersAction|
+    7400136: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|skywrath2:wingslow002Action|vsDmxIO
+    7400138: skywrath_mage1|vsDmxIO Scene|vsDmxIO Scene|spawn|vsDmxIO Scene|spawn
+    7400140: skywrath_mage1|weapon_lowShapeAction
+    7400142: skywrath_mage1|weapon_lowShapeAction.001
+    7400144: skywrath_mage1|wingslow002ShapeAction
+    9500000: //RootNode
+    13700000: baseShape
+    13700002: skywrath_beltShape
+    13700004: skywrath_bracersShape
+    13700006: skywrath_helmetShape
+    13700008: skywrath_shouldersShape
+    13700010: weapon_lowShape
+    13700012: wingslow002Shape
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: skywrath_mage1|attack.001
+      takeName: skywrath_mage1|attack.001
+      firstFrame: 2115
+      lastFrame: 2142
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.2729217
+        functionName: AttackStart
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5246446
+        functionName: AttackStop
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: skywrath_mage1|cast.001
+      takeName: skywrath_mage1|cast.001
+      firstFrame: 1800
+      lastFrame: 1828
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.32659936
+        functionName: Skill_1_Start
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: skywrath_mage1|cast2.001
+      takeName: skywrath_mage1|cast2.001
+      firstFrame: 963
+      lastFrame: 991
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.2704432
+        functionName: Skill_2_Start
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: skywrath_mage1|cast3.001
+      takeName: skywrath_mage1|cast3.001
+      firstFrame: 909
+      lastFrame: 937
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.50303924
+        functionName: Skill_3_Start
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 1
+        functionName: Skill_3_end
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: skywrath_mage1|death.001
+      takeName: skywrath_mage1|death.001
+      firstFrame: 3677
+      lastFrame: 3729
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: skywrath_mage1|idle.001
+      takeName: skywrath_mage1|idle.001
+      firstFrame: 3600
+      lastFrame: 3624
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: skywrath_mage1|pray
+      takeName: skywrath_mage1|pray
+      firstFrame: 0
+      lastFrame: 2486
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: skywrath_mage1|run_aggresive.001
+      takeName: skywrath_mage1|run_aggresive.001
+      firstFrame: 3575
+      lastFrame: 3600
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: skywrath_mage1|spawn.001
+      takeName: skywrath_mage1|spawn.001
+      firstFrame: 3498
+      lastFrame: 3518
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

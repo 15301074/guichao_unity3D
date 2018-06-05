@@ -20,6 +20,13 @@ TagManager:
   - GameCanvas
   - ATKSkill3
   - ATKSkill1
+  - monster1
+  - monster2
+  - monster3
+  - snakeSkill2
+  - ATKSkill4
+  - monster4
+  - monster5
   layers:
   - Default
   - TransparentFX

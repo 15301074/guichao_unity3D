@@ -1,0 +1,27 @@
+<!--游戏设置-->
+<settings>
+  <setting1>
+    <name>分辨率</name>
+    <value>0</value>
+  </setting1>
+  <setting2>
+    <name>游戏音量</name>
+    <value>1</value>
+  </setting2>
+  <setting3>
+    <name>游戏音效</name>
+    <value>1</value>
+  </setting3>
+  <setting4>
+    <name>全屏</name>
+    <value>False</value>
+  </setting4>
+  <setting5>
+    <name>音乐静音</name>
+    <value>False</value>
+  </setting5>
+  <setting6>
+    <name>音效静音</name>
+    <value>False</value>
+  </setting6>
+</settings>

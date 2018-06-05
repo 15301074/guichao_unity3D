@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class snakeAI : MonoBehaviour {
     public GameObject game;
-   // private skyWrathMageControl gameComp1;
+    private skyWrathMageControl gameComp1;
     public float alertSnakeRange;//视野范围
     public float defendSnakeRange;//自卫范围
     public float attackSnakeRange;//攻击范围
@@ -25,6 +25,14 @@ public class snakeAI : MonoBehaviour {
     public float snakeActRestTme;            //更换待机指令的间隔时间  7秒/140
     private float snakeLastActTime;
     private float snakeLastActTime1;
+    private int jj;
+
+
+    public Rigidbody Skill_1;
+    public Transform Skill_1_Position;
+    public Rigidbody Skill_2;
+    public Transform Skill_2_Position;
+    Rigidbody Skill_2_ins;
     private enum MonsterState
     {
         snakeIDLE,
@@ -42,14 +50,16 @@ public class snakeAI : MonoBehaviour {
         snakeDIE1,
         snakeDIE2,
         snakeHit1,
-        snakeHite2
+        snakeHite2,
+        snakeDie
     }
 
 	void Start () {
         flag = 0;
         isInSkill3 = false;
         state = "Idle";
-       // gameComp1 = game.GetComponent<skyWrathMageControl>();
+        jj = 0;
+        gameComp1 = game.GetComponent<skyWrathMageControl>();
         snakeAnimation = this.GetComponent<Animation>();
 	}
 
@@ -84,6 +94,9 @@ public class snakeAI : MonoBehaviour {
     {
         int k = 0;
         this.snakeDistanceToPlayer = Vector3.Distance(game.transform.position, this.transform.position);
+        if (this.GetComponent<MonsterAI>().hp <= 0)
+            return 5;
+
         if (snakeDistanceToPlayer >= this.alertSnakeRange + 25f)
             k = 0;
         else if (snakeDistanceToPlayer >= this.alertSnakeRange)
@@ -198,12 +211,18 @@ public class snakeAI : MonoBehaviour {
     }
 
     void Update () {
-        flag = this.getFlag(); 
-        if (Time.time - snakeLastActTime >= snakeActRestTme)
+        flag = this.getFlag();
+        if (flag == 5)
+        {
+                    currentSnakeState = MonsterState.snakeDie;
+                    snakeLastActTime = Time.time;
+                    state = "Death1";
+        }
+        else if (Time.time - snakeLastActTime >= snakeActRestTme)
         {
             if (flag == 1)
                 changeStateIn1();
-            if (flag ==2)
+            if (flag == 2)
                 changeStateIn2();
             if (flag == 3)
                 changeStateIn3();
@@ -220,6 +239,8 @@ public class snakeAI : MonoBehaviour {
                 //播放特效，增加攻击力，移动速度
             }
         }
+        targetRotation = Quaternion.LookRotation(game.transform.position - transform.position, Vector3.up);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.1f);
         switch (currentSnakeState)
         {
             case MonsterState.snakeIDLE:
@@ -233,9 +254,7 @@ public class snakeAI : MonoBehaviour {
                 this.playAnimationByState(state);
                 break;
             case MonsterState.snakeMOVE:
-                this.playAnimationByState(state);
-                targetRotation = Quaternion.LookRotation(game.transform.position-transform.position, Vector3.up);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.1f);
+                this.playAnimationByState(state); 
                 transform.Translate(Vector3.forward * Time.deltaTime * snakeMoveSpeed);
                 print("skill3");
                 break;
@@ -243,9 +262,7 @@ public class snakeAI : MonoBehaviour {
             case MonsterState.snakeSkill3:
                 if (flag == 1)
                 {
-                    this.playAnimationByState(state);
-                    targetRotation = Quaternion.LookRotation(game.transform.position - transform.position, Vector3.up);
-                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.1f);
+                    this.playAnimationByState(state); 
                     transform.Translate(Vector3.forward * Time.deltaTime * snakeMoveSpeed*2.0f);
                     print("skill3");
                 }
@@ -271,6 +288,9 @@ public class snakeAI : MonoBehaviour {
             case MonsterState.snakeSkill5:
                 this.playAnimationByState(state);
                 break;
+            case MonsterState.snakeDie:
+                this.playAnimationByState(state);
+                break;
             default:
                 break;
         }  
@@ -278,5 +298,36 @@ public class snakeAI : MonoBehaviour {
     void playAnimationByState(string state)
     {
         snakeAnimation.Play(state.Trim());
+    }
+
+    void death()
+    {
+        Destroy(gameObject, 1.0f);
+    }
+
+    public virtual void skill1()
+    {
+        Rigidbody clone;
+        clone = (Rigidbody)Instantiate(Skill_1, Skill_1_Position.position, Skill_1_Position.rotation);
+        clone.velocity = transform.TransformDirection(Vector3.forward * 10f);
+        print("skill1");
+        //3秒后销毁克隆体
+        Destroy(GameObject.Find("SnakeSkill1(Clone)"), 2);
+    }
+
+
+    public virtual void skill2p()
+    {
+        Skill_2_ins = (Rigidbody)Instantiate(Skill_2, Skill_2_Position.position, Skill_2_Position.rotation);
+        print("skill2p");
+        //3秒后销毁克隆体
+        Destroy(GameObject.Find("SnakeSkill2(Clone)"), 2);
+    }
+
+
+    public virtual void skill2s()
+    {
+        Skill_2_ins.velocity = transform.TransformDirection(Vector3.forward *10f);
+        print("skill2s");
     }
 }
