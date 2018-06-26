@@ -6,11 +6,11 @@
   </setting1>
   <setting2>
     <name>游戏音量</name>
-    <value>0.4318182</value>
+    <value>0.6607143</value>
   </setting2>
   <setting3>
     <name>游戏音效</name>
-    <value>0</value>
+    <value>0.6964286</value>
   </setting3>
   <setting4>
     <name>全屏</name>
@@ -18,10 +18,10 @@
   </setting4>
   <setting5>
     <name>音乐静音</name>
-    <value>True</value>
+    <value>False</value>
   </setting5>
   <setting6>
     <name>音效静音</name>
-    <value>True</value>
+    <value>False</value>
   </setting6>
 </settings>

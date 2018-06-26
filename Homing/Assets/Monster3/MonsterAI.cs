@@ -28,17 +28,37 @@ public class MonsterAI : MonoBehaviour {
     private Collider collider;
     private Collider atkSphereEnemy;
 
+    
 
+         
     // Use this for initialization
     void Awake() {
+        //血条朝摄像机
+       // Vector3 lookCamera = Camera.main.transform.position ;
+       //// lookCamera.y = 0;
+       // hpSlider.transform.rotation = Quaternion.LookRotation(lookCamera);
+       // hpText.transform.rotation = Quaternion.LookRotation(lookCamera);
+
+        //血条放大
+        //hpSlider.transform.localScale = new Vector3(1, 1, 1);
+        //hpText.transform.localScale = new Vector3(1, 1, 1);
+
+        hpText.text = hp + " / " + hpMax;
+        stooPlayBloodEFX();
         hp = hpMax;
         animator = GetComponent<Animator>();
         collider = GetComponent<Collider>();
         atkSphereEnemy = GetComponentInChildren<SphereCollider>();
+      
     }
 
     // Update is called once per frame
     void Update() {
+        //Vector3 lookCamera = Camera.main.transform.position - transform.position;
+        //lookCamera.y = 0;
+        //hpSlider.transform.rotation = Quaternion.LookRotation(lookCamera);
+        //hpText.transform.rotation = Quaternion.LookRotation(lookCamera);
+
         hp = Mathf.Clamp(hp, 0, hpMax);
         hpText.text = hp + " / " + hpMax;
         hpSlider.value = (float)hp / (float)hpMax;

@@ -37,10 +37,11 @@ public class fenlinlongSkill : MonoBehaviour
     }
     public virtual void doctorskill()
     {
+        Destroy(GameObject.Find("DoctorSkill(Clone)"));
         print("doctor");
         Rigidbody clone;
         clone = (Rigidbody)Instantiate(Skill_1, Skill_1_Position.position, Skill_1_Position.rotation);
         //3秒后销毁克隆体
-        Destroy(GameObject.Find("DoctorSkill(Clone)"), 3);
+        Destroy(GameObject.Find("DoctorSkill(Clone)"), 1);
     }
 }

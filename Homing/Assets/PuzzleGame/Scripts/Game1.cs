@@ -119,7 +119,7 @@ public class Game1 : MonoBehaviour {
 	/* 游戏奖励 */
 	private void rewards() {
 		Item item = new Item ();
-		item.Additem ("玲珑心", Item.type.pasEquip,0);
+		item.Additem ("玲珑心", Item.type.pasEquip,-1);
 		item.Additem ("仙灵之火", Item.type.consumable,3);
 
 	}

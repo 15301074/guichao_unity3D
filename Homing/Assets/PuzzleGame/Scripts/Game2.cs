@@ -27,7 +27,7 @@ public class Game2 : MonoBehaviour {
 		game2.SetActive (false);
 		state = "question1";
 		answer1 = "SHIFT";
-		answer2 = "1";		// swhdayrugqtgrjgs
+		answer2 = "a";		// swhdayrugqtgrjgs
 		dialog = new Dialog (dia);
 
 		/* 初始化GameObject */
@@ -142,7 +142,7 @@ public class Game2 : MonoBehaviour {
 	/* 游戏奖励 */
 	private void rewards() {
 		Item item = new Item ();
-		item.Additem ("古典密码学", Item.type.pasEquip,0);	
+		item.Additem ("古典密码学", Item.type.pasEquip,-1);	
 		item.Additem ("芒果", Item.type.consumable,3);
 	}
 }

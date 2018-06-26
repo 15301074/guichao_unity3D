@@ -50,20 +50,20 @@ public class ItemCommnEvents : MonoBehaviour, IPointerClickHandler, IPointerEnte
 		}
 	}
 
-	/* 点击数量减一，减至0物品耗尽 */
-	public void OnPointerClick(PointerEventData eventData){
-		if(eventData.pointerId == -1){
+    /* 点击数量减一，减至0物品耗尽 */
+    public void OnPointerClick(PointerEventData eventData){
+        /*if(eventData.pointerId == -1){
 			Text numText = this.transform.GetChild (0).GetComponent<Text> ();
 			numText.text = (int.Parse(numText.text) - 1).ToString();
 			if (this.transform.GetChild (0).GetComponent<Text> ().text.Equals ("0")) {
 				this.gameObject.SetActive (false);
 				GameObject.FindGameObjectWithTag ("Description").SetActive(false);
 			}
-		}
-	}
+		}*/
+    }
 
-	/* 经过显示描述 */
-	public void OnPointerEnter(PointerEventData eventData){
+    /* 经过显示描述 */
+    public void OnPointerEnter(PointerEventData eventData){
 
 		/* 设置属性 */
 		iconImg.GetComponent<Image> ().sprite = Resources.Load ("Items/" + itemName, typeof(Sprite)) as Sprite;

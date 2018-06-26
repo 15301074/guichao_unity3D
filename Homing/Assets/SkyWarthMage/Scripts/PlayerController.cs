@@ -37,11 +37,13 @@ public class PlayerController : MonoBehaviour {
 
 		/* 添加道具 */
 		Item item = new Item ();
-		item.Additem ("藏宝图", Item.type.activeProp,0);		// 主动道具
-		item.Additem ("狗头人的小铁锹", Item.type.consumable,3);		// 消耗品
-	}
+        item.Additem("藏宝图", Item.type.activeProp, 0);		// 主动道具
+        item.Additem ("狗头人的小铁锹", Item.type.consumable,3);       // 消耗品
+        item.Additem("芒果", Item.type.consumable, 1);
 
-	void FixedUpdate () {
+    }
+
+    void FixedUpdate () {
 
 		float h = Input.GetAxisRaw("Horizontal");
 		float v = Input.GetAxisRaw("Vertical");

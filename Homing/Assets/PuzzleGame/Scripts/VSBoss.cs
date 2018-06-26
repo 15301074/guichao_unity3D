@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class VSBoss : MonoBehaviour {
 
 	public GameObject dia;
+    public GameObject bossHP;
 	private GameObject player;
 	private Dialog dialog;
+
 
 	void Start() {
 		player = GameObject.FindGameObjectWithTag ("Player");
@@ -23,7 +25,8 @@ public class VSBoss : MonoBehaviour {
 			dialog.setAnswer (null, "继续");
 			dialog.getAnswer2Btn().GetComponent<Button>().onClick.AddListener (delegate() {
 				continueGame();
-			});
+                bossHP.SetActive(true);
+            });
 			pauseGame ();
 		}
 	}

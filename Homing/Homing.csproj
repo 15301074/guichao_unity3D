@@ -258,6 +258,7 @@
     <Compile Include="Assets\PuzzleGame\Scripts\Roadblock.cs" />
     <Compile Include="Assets\PuzzleGame\Scripts\TalkWithFuri.cs" />
     <Compile Include="Assets\PuzzleGame\Scripts\VSBoss.cs" />
+    <Compile Include="Assets\SkyWarthMage\Scripts\HotbarKeyborad.cs" />
     <Compile Include="Assets\SkyWarthMage\Scripts\PlayerController.cs" />
     <Compile Include="Assets\SkyWarthMage\Scripts\Skill\skill1.cs" />
     <Compile Include="Assets\SkyWarthMage\Scripts\Skill\skill3.cs" />
